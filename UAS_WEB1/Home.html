@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+</head>
+<body>
+<style>
+    body {
+        margin: 0;
+    }
+    /* style the header */
+    .header {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<div class="header">
+    <h1><img src="unpam.jpg" width="500" height="200" alt="logo unpam"></h1>
+</div>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+/* style the header */
+.header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+/* style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: blue;
+}
+/* style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* change color on hover */
+.topnav a:hover {
+    background-color: blue;
+    color: black;
+}
+</style>
+<div class="topnav">
+<a href="Home.html">Beranda</a>
+<a href="Login.html">Login</a>
+<a href="profil.html">Profil</a>
+<a href="transaksi.html">Transaksi</a>
+</div>
+<style>
+/* create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 15px;
+}
+/* clear floats after the columns */
+.row:after {
+    content: right;
+    display: table;
+    clear: both;
+}
+/* responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-widht:600px) {
+.column {
+    width: 100%;
+}
+}
+</style>
+<div class="row">
+    <div class="column">
+        <h2><li>Beranda</li></h2>
+        <p>Kami hadir untuk memberikan layanan simpan pinjam yang aman, mudah, dan terpercaya untuk kebutuhan anda.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <h2><li>Login</li></h2>
+        <p>Di link ini anda dapat login ke akun anda dengan memasukkan username dan password akun anda.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <h2><li>Profil</li></h2>
+        <p>Halaman profil berisi deskripsi aplikasi yang dibuat.</p>    
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <h2><li>Transaksi</li></h2>
+        <p>Halaman transaksi berisi form pengisian transaksi aplikasi disertai tombol simpan.</p>
+    </div>
+</div>
+    
+</body>
+</html>
