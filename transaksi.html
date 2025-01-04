@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Transaksi</title>
+    <style>
+        body {
+            font-family: Arial; sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Transaksi Simpan Pinjam</h1>
+        <form id="TransaksiForm">
+            <label for="nama">Nama Transaksi</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="jumlah">Jumlah</label>
+            <input type="number" id="jumlah" name="jumlah" required>
+
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori" required>
+                <option value="Simpanan">Simpanan</option>
+                <option value="Pinjaman">Pinjaman</option>
+            </select>
+
+            <button type="Submit">Simpan</button>
+        </form>
+        <a href="#DaftarTransaksi">Lihat Daftar Transaksi</a>
+
+        <div id="DaftarTransaksi">
+            <h2>Daftar Transaksi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Transaksi</th>
+                        <th>Jumlah</th>
+                        <th>Kategori</th>
+                    </tr>
+                </thead>
+                <tbody id="TransaksiTableBody">
+                    <!-- Data transaksi akan ditambahkan secara dinamis-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const transaksiForm = document.getElementById('transaksiform');
+        const TransaksiTableBody = document.getElementById('TransaksiTableBody');
+
+        transaksiForm.addEventListener('submit'), function (event) {
+            event.preventDefault();
+
+            // Ambil nilai dari form
+            const nama = document.getElementById('nama').value;
+            const jumlah = document.getElementById('nama').value;
+            const kategori = document.getElementById('nama').value;
+
+            // Tambahkan data ke table
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${nama}</td>
+                <td>${jumlah}</td>
+                <td>${kategori}</td>
+            `;
+        transaksiTableBody.appendChild(row);
+
+            // Reset form
+            transaksiForm.reset()
+        });
+    </script>
+</body>
+</html>
